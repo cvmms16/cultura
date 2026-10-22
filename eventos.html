@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Eventos - Cultural</title>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/list-style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,217 +17,255 @@
 
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/Brasao-novo.jpg" alt="Logo Cultural">
-                <span>Cultural<br><strong>Palmares</strong></span>
-            </a>
+<header class="main-header">
+    <div class="container">
 
-            <nav class="main-nav">
-                <a href="agentes.html">Agentes</a>
-                <a href="espacos.html">Espaços</a>
-                <a href="eventos.html">Eventos</a>
-            </nav>
+        <a href="index.html" class="logo">
+            <img src="images/Brasao-novo.jpg" alt="Logo Cultural">
+            <span>Cultural<br><strong>Palmares</strong></span>
+        </a>
 
-            <a href="login.html" class="login-button">Entrar</a>
-        </div>
-    </header>
+        <nav class="main-nav">
+            <a href="index.html">Início</a>
+            <a href="agentes.html">Agentes</a>
+            <a href="espacos.html">Espaços</a>
+        </nav>
 
-    <main class="list-page">
-        <div class="container">
+        <a href="login.html" class="login-button">Entrar</a>
 
-            <header class="page-header">
-                <h1>Agenda de Eventos</h1>
-                <p>
-                    Encontre eventos culturais que acontecem em Palmares e região.
-                </p>
-            </header>
+    </div>
+</header>
 
-            <section class="filter-bar">
-                <form id="event-search-form">
+<main class="list-page">
 
-                    <div class="filter-group search">
-                        <label for="search">Buscar por nome do evento</label>
-                        <input
-                            type="text"
-                            id="search"
-                            placeholder="Ex: Festival de Música"
-                            autocomplete="off"
-                        >
-                    </div>
+    <div class="container">
 
-                    <div class="filter-group">
-                        <label for="type">Tipo de Evento</label>
-                        <select id="type">
-                            <option>Todos</option>
-                            <option>Show</option>
-                            <option>Festival</option>
-                            <option>Exposição</option>
-                            <option>Festa Popular</option>
-                            <option>Sarau</option>
-                        </select>
-                    </div>
+        <header class="page-header">
+            <h1>Agenda de Eventos</h1>
 
-                    <div class="filter-group">
-                        <label for="period">Período</label>
-                        <select id="period">
-                            <option>Qualquer data</option>
-                            <option>Hoje</option>
-                            <option>Esta semana</option>
-                            <option>Este mês</option>
-                        </select>
-                    </div>
+            <p>
+                Fique por dentro dos shows, festivais, exposições
+                e outras manifestações culturais que acontecem em
+                Palmares e região.
+            </p>
+        </header>
 
-                    <button type="submit" class="filter-button">
-                        Filtrar
-                    </button>
+        <section class="filter-bar">
 
-                </form>
-            </section>
+            <form id="filter-form">
 
-            <section class="results-grid" id="results-grid">
+                <div class="filter-group search">
+                    <label for="search">Buscar por nome do evento</label>
 
-                <div class="item-card" data-event-name="Arraiá de Palmares">
-                    <div
-                        class="card-image"
-                        style="background-image: url('images/eventos.jpg');">
-                    </div>
-
-                    <div class="card-content">
-                        <div class="card-tags">
-                            <span class="card-category">Festa Popular</span>
-                            <span class="card-status progress">Acontecendo</span>
-                        </div>
-
-                        <h3 class="card-title">Arraiá de Palmares</h3>
-
-                        <p class="card-subtitle">
-                            28 a 30 de Julho. Festa junina com quadrilhas,
-                            comidas típicas e apresentações culturais.
-                        </p>
-
-                        <a href="#" class="card-button">
-                            Ver programação →
-                        </a>
-                    </div>
+                    <input
+                        type="search"
+                        id="search"
+                        placeholder="Ex: Arraiá de Palmares"
+                        autocomplete="off"
+                    >
                 </div>
 
-                <div class="item-card" data-event-name="Show com Nando Reis">
-                    <div
-                        class="card-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=2070&auto=format&fit=crop');">
-                    </div>
+                <div class="filter-group">
+                    <label for="type">Tipo de Evento</label>
 
-                    <div class="card-content">
-                        <div class="card-tags">
-                            <span class="card-category">Show</span>
-                        </div>
-
-                        <h3 class="card-title">Show com Nando Reis</h3>
-
-                        <p class="card-subtitle">
-                            Dia 15 de Agosto, no Ginásio Municipal.
-                            Apresentação musical aberta ao público.
-                        </p>
-
-                        <a href="#" class="card-button">
-                            Ver programação →
-                        </a>
-                    </div>
+                    <select id="type">
+                        <option value="Todos">Todos</option>
+                        <option value="Show">Show</option>
+                        <option value="Festival">Festival</option>
+                        <option value="Exposição">Exposição</option>
+                        <option value="Festa Popular">Festa Popular</option>
+                        <option value="Sarau">Sarau</option>
+                    </select>
                 </div>
+
+                <button type="submit" class="filter-button">
+                    Filtrar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="results-grid" id="results">
+
+            <div
+                class="item-card event-card"
+                data-event-name="Arraiá de Palmares"
+                data-event-type="Festa Popular"
+            >
 
                 <div
-                    class="item-card"
-                    data-event-name="Festival de Violeiros de Palmares">
+                    class="card-image"
+                    style="background-image: url('images/eventos.jpg');"
+                ></div>
 
-                    <div
-                        class="card-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop');">
+                <div class="card-content">
+
+                    <div class="card-tags">
+                        <span class="card-category">Festa Popular</span>
+                        <span class="card-status progress">Acontecendo</span>
                     </div>
 
-                    <div class="card-content">
-                        <div class="card-tags">
-                            <span class="card-category">Festival</span>
-                        </div>
+                    <h3 class="card-title">
+                        Arraiá de Palmares
+                    </h3>
 
-                        <h3 class="card-title">
-                            Festival de Violeiros de Palmares
-                        </h3>
+                    <p class="card-subtitle">
+                        28 a 30 de Julho. A maior festa junina da região,
+                        com quadrilhas, comidas típicas e shows ao vivo.
+                    </p>
 
-                        <p class="card-subtitle">
-                            Dias 05 e 06 de Setembro. Encontro de artistas
-                            da música e da cultura popular nordestina.
-                        </p>
+                    <a href="evento-detalhe.html" class="card-button">
+                        Ver programação →
+                    </a>
 
-                        <a href="#" class="card-button">
-                            Ver programação →
-                        </a>
-                    </div>
                 </div>
 
-            </section>
+            </div>
 
-            <p
-                id="no-results"
-                style="display: none; text-align: center; margin-top: 30px;">
-                Nenhum evento encontrado para a busca.
-            </p>
+            <div
+                class="item-card event-card"
+                data-event-name="Show com Nando Reis"
+                data-event-type="Show"
+            >
 
-            <nav class="pagination">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">Próxima →</a>
-            </nav>
+                <div
+                    class="card-image"
+                    style="background-image: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=2070&auto=format&fit=crop');"
+                ></div>
 
-        </div>
-    </main>
+                <div class="card-content">
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2026 Cultural — Agenda Cultural de Palmares.</p>
+                    <div class="card-tags">
+                        <span class="card-category">Show</span>
+                    </div>
 
-            <nav>
-                <a href="#">Sobre o Cultural</a>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Contato</a>
-            </nav>
-        </div>
-    </footer>
+                    <h3 class="card-title">
+                        Show com Nando Reis
+                    </h3>
 
-    <script>
-        const form = document.getElementById("event-search-form");
-        const searchInput = document.getElementById("search");
-        const eventCards = document.querySelectorAll(".item-card");
-        const noResults = document.getElementById("no-results");
+                    <p class="card-subtitle">
+                        Dia 15 de Agosto, no Ginásio Municipal.
+                        Evento musical com apresentação ao vivo.
+                    </p>
 
-        function filterEvents() {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            let foundEvents = 0;
+                    <a href="evento-detalhe.html" class="card-button">
+                        Ver programação →
+                    </a>
 
-            eventCards.forEach(card => {
-                const eventName = card.dataset.eventName.toLowerCase();
+                </div>
 
-                if (eventName.includes(searchTerm)) {
-                    card.style.display = "";
-                    foundEvents++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
+            </div>
 
-            noResults.style.display = foundEvents === 0 ? "block" : "none";
+            <div
+                class="item-card event-card"
+                data-event-name="Festival de Violeiros de Palmares"
+                data-event-type="Festival"
+            >
+
+                <div
+                    class="card-image"
+                    style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop');"
+                ></div>
+
+                <div class="card-content">
+
+                    <div class="card-tags">
+                        <span class="card-category">Festival</span>
+                    </div>
+
+                    <h3 class="card-title">
+                        Festival de Violeiros de Palmares
+                    </h3>
+
+                    <p class="card-subtitle">
+                        Dias 05 e 06 de Setembro. Encontro de grandes
+                        nomes da cantoria e da viola, celebrando a
+                        cultura popular nordestina.
+                    </p>
+
+                    <a href="evento-detalhe.html" class="card-button">
+                        Ver programação →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <p id="no-results" hidden>
+            Nenhum evento encontrado para a busca realizada.
+        </p>
+
+    </div>
+
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>Cultural — Agenda Cultural de Palmares</p>
+    </div>
+</footer>
+
+<script>
+    const form = document.getElementById("filter-form");
+    const searchInput = document.getElementById("search");
+    const typeSelect = document.getElementById("type");
+    const eventCards = document.querySelectorAll(".event-card");
+    const noResults = document.getElementById("no-results");
+
+    function normalizeText(text) {
+        return text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+    }
+
+    function filterEvents(event) {
+        if (event) {
+            event.preventDefault();
         }
 
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            filterEvents();
+        const searchTerm = normalizeText(searchInput.value);
+        const selectedType = normalizeText(typeSelect.value);
+
+        let visibleEvents = 0;
+
+        eventCards.forEach(card => {
+            const eventName = normalizeText(
+                card.dataset.eventName
+            );
+
+            const eventType = normalizeText(
+                card.dataset.eventType
+            );
+
+            const matchesName =
+                eventName.includes(searchTerm);
+
+            const matchesType =
+                selectedType === "todos" ||
+                eventType === selectedType;
+
+            if (matchesName && matchesType) {
+                card.style.display = "";
+                visibleEvents++;
+            } else {
+                card.style.display = "none";
+            }
         });
 
-        searchInput.addEventListener("input", filterEvents);
-    </script>
+        noResults.hidden = visibleEvents !== 0;
+    }
+
+    form.addEventListener("submit", filterEvents);
+
+    searchInput.addEventListener("input", filterEvents);
+
+    typeSelect.addEventListener("change", filterEvents);
+</script>
 
 </body>
 </html>
